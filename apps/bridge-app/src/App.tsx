@@ -28,7 +28,7 @@ type ProviderProps = {
 
 const queryClient = new QueryClient()
 
-const opChains = configureOpChains({ type: NETWORK_TYPE })
+const opChains = configureOpChains({ type: 'quicknode' })
 
 const wagmiConfig = getDefaultConfig({
   appName: 'Example OP Stack Bridge',

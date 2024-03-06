@@ -15,6 +15,7 @@
   "dependencies": {
     "@eth-optimism/contracts-ts": "^0.17.0",
     "@eth-optimism/op-app": "*",
+    "@eth-optimism/op-wagmi": "^1.0.0",
     "@eth-optimism/tokenlist": "^9.0.12",
     "@eth-optimism/ui-components": "*",
     "@rainbow-me/rainbowkit": "2.0.0-beta.1",

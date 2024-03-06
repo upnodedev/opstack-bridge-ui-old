@@ -9,12 +9,12 @@
     },
     "packages": {
       "op-app": ["type:package"],
-      "ui-components": ["type:package"]
+      "ui-components": ["type:package"],
+      "op-op-wagmi": ["type:package"]
     }
   },
   "targetDefaults": {
     "dev": {
-      "cache": true,
       "dependsOn": ["^build"]
     },
     "build": {

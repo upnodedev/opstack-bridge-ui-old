@@ -16,6 +16,30 @@ import {
 import type { NetworkPairGroup } from '../types'
 import { lyra, mode, orderlyNetwork } from './chains'
 
+// clone of mainnet and edit the chainId
+const quicknodeETHSepolia: Chain = {
+  ...sepolia,
+  name: 'quicknodeETHSepolia',
+  rpcUrls: {
+    default: {
+      http: [
+        'https://omniscient-sparkling-model.ethereum-sepolia.quiknode.pro/0650b5f675a2d17b00c8aa2a29dadc3e46f7fdbb/',
+      ],
+    },
+  },
+}
+const quicknodeOPMainnet: Chain = {
+  ...optimismSepolia,
+  name: 'quicknodeOPMainnet',
+  rpcUrls: {
+    default: {
+      http: [
+        'https://dimensional-purple-mountain.optimism-sepolia.quiknode.pro/44f0d61844a6b6e40d2c2408aef2a4dd4df22f83/',
+      ],
+    },
+  },
+}
+
 export type NetworkType =
   | 'base'
   | 'lyra'
@@ -24,6 +48,7 @@ export type NetworkType =
   | 'orderly'
   | 'pgn'
   | 'zora'
+  | 'quicknode'
 
 export const networkPairsByGroup: NetworkPairGroup = {
   base: {
@@ -50,6 +75,10 @@ export const networkPairsByGroup: NetworkPairGroup = {
   zora: {
     mainnet: [mainnet, zora],
     sepolia: [sepolia, zoraSepolia],
+  },
+  quicknode: {
+    mainnet: [mainnet, optimism],
+    sepolia: [quicknodeETHSepolia, quicknodeOPMainnet],
   },
 }
 

@@ -5,7 +5,7 @@ import {
   DialogTrigger,
   Button,
 } from '@eth-optimism/ui-components'
-import { useWriteDepositERC20, useWriteDepositETH } from 'op-wagmi'
+import { useWriteDepositERC20, useWriteDepositETH } from '@eth-optimism/op-wagmi'
 import type { Token } from '@eth-optimism/op-app'
 import { useOPWagmiConfig, deploymentAddresses } from '@eth-optimism/op-app'
 
